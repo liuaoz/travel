@@ -1,11 +1,15 @@
 <template>
-  <div>welcome to matrix.</div>
+
+  <div>Welcome to my home.</div>
+
 </template>
 
 <script>
+
 export default {
-  name: 'HelloWorld'
+  msg: 'this is my home page.'
 }
+
 </script>
 
 <style scoped>

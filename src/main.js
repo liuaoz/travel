@@ -7,6 +7,7 @@ import router from './router'
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
+/* 在es6中，键和值一样的情况，可以省略一部分 */
 new Vue({
   el: '#app',
   router,
