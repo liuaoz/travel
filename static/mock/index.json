@@ -1,0 +1,24 @@
+{
+  "status": true,
+  "data": {
+    "city": "漳州",
+    "swiperList2": [
+      {
+        "id": "001",
+        "imgUrl": "/static/images/mother-daughter.JPG"
+      },
+      {
+        "id": "002",
+        "imgUrl": "/static/images/my-parents.JPG"
+      },
+      {
+        "id": "003",
+        "imgUrl": "/static/images/mother-daughter.JPG"
+      },
+      {
+        "id": "004",
+        "imgUrl": "/static/images/with-computer.JPG"
+      }
+    ]
+  }
+}

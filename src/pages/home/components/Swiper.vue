@@ -3,12 +3,10 @@
     <swiper :options="swiperOption">
       <!-- slides -->
       <swiper-slide v-for="item of swiperList" :key="item.id">
-        <img class="swiper-img" :src="item.url">
+        <img class="swiper-img" :src="item.imgUrl">
       </swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination"></div>
-      <!--<div class="swiper-button-prev" slot="button-prev"></div>
-      <div class="swiper-button-next" slot="button-next"></div>-->
     </swiper>
   </div>
 </template>
@@ -16,6 +14,31 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    swiperList: {
+      type: Array,
+      default () {
+        return [
+          {
+            id: '001',
+            imgUrl: '/static/images/mother-daughter.JPG'
+          },
+          {
+            id: '002',
+            imgUrl: '/static/images/my-parents.JPG'
+          },
+          {
+            id: '003',
+            imgUrl: '/static/images/mother-daughter.JPG'
+          },
+          {
+            id: '004',
+            imgUrl: '/static/images/with-computer.JPG'
+          }
+        ]
+      }
+    }
+  },
   data () {
     return {
       swiperOption: {
@@ -27,22 +50,22 @@ export default {
           delay: 1000
         }
       },
-      swiperList: [
+      swiperList2: [
         {
           id: '001',
-          url: '/static/images/mother-daughter.JPG'
+          imgUrl: '/static/images/mother-daughter.JPG'
         },
         {
           id: '002',
-          url: '/static/images/my-parents.JPG'
+          imgUrl: '/static/images/my-parents.JPG'
         },
         {
           id: '003',
-          url: '/static/images/mother-daughter.JPG'
+          imgUrl: '/static/images/mother-daughter.JPG'
         },
         {
           id: '004',
-          url: '/static/images/with-computer.JPG'
+          imgUrl: '/static/images/with-computer.JPG'
         }
       ]
     }
