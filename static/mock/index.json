@@ -2,7 +2,7 @@
   "status": true,
   "data": {
     "city": "漳州",
-    "swiperList2": [
+    "swiperList": [
       {
         "id": "001",
         "imgUrl": "/static/images/mother-daughter.JPG"
@@ -18,6 +18,53 @@
       {
         "id": "004",
         "imgUrl": "/static/images/with-computer.JPG"
+      }
+    ],
+    "categoryList": [
+      {
+        "id": "0001",
+        "imgUrl": "/static/images/grandma-daughter.JPG",
+        "desc": "家乡哈哈哈哈哈哈哈"
+      },
+      {
+        "id": "0002",
+        "imgUrl": "/static/images/grandma-daughter.JPG",
+        "desc": "古城"
+      },
+      {
+        "id": "0003",
+        "imgUrl": "/static/images/grandma-daughter.JPG",
+        "desc": "抽象画廊"
+      },
+      {
+        "id": "0004",
+        "imgUrl": "/static/images/grandma-daughter.JPG",
+        "desc": "翡翠湾"
+      },
+      {
+        "id": "0005",
+        "imgUrl": "/static/images/grandma-daughter.JPG",
+        "desc": "渔港"
+      },
+      {
+        "id": "0006",
+        "imgUrl": "/static/images/grandma-daughter.JPG",
+        "desc": "风车"
+      },
+      {
+        "id": "0007",
+        "imgUrl": "/static/images/grandma-daughter.JPG",
+        "desc": "冲浪"
+      },
+      {
+        "id": "0008",
+        "imgUrl": "/static/images/grandma-daughter.JPG",
+        "desc": "大厝"
+      },
+      {
+        "id": "0009",
+        "imgUrl": "/static/images/grandma-daughter.JPG",
+        "desc": "草礁"
       }
     ]
   }
