@@ -4,7 +4,7 @@
   <home-swiper></home-swiper>
   <home-icons></home-icons>
   <home-recommend></home-recommend>
-  <div>Welcome to my home.</div>
+  <home-weekend></home-weekend>
   <home-footer></home-footer>
 </div>
 
@@ -15,6 +15,7 @@ import HomeHeader from './components/Header'
 import HomeFooter from './components/Footer'
 import HomeSwiper from './components/Swiper'
 import HomeRecommend from './components/Recommend'
+import HomeWeekend from './components/Weekend'
 import HomeIcons from './components/Icons'
 
 export default {
@@ -24,6 +25,7 @@ export default {
     HomeSwiper,
     HomeIcons,
     HomeRecommend,
+    HomeWeekend,
     HomeFooter
   }
 }
