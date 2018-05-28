@@ -1,10 +1,10 @@
 <template>
   <div class="icons">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="showCategory">
       <swiper-slide v-for="(page, index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
-            <img class="icon-img-content" :src="item.url"/>
+            <img class="icon-img-content" :src="item.imgUrl"/>
           </div>
           <p class="icon-desc">{{item.desc}}</p>
         </div>
@@ -18,66 +18,22 @@ import SwiperSlide from '../../../../node_modules/vue-awesome-swiper/src/slide.v
 
 export default {
   components: {SwiperSlide},
+  props: {
+    list: Array
+  },
   name: 'HomeIcons',
   data () {
     return {
       swiperOption: {
+        autoplay: false,
         loop: true
-      },
-      iconList: [
-        {
-          id: '0001',
-          url: '/static/images/grandma-daughter.JPG',
-          desc: '名人堂'
-        },
-        {
-          id: '0002',
-          url: '/static/images/grandma-daughter.JPG',
-          desc: '古城'
-        },
-        {
-          id: '0003',
-          url: '/static/images/grandma-daughter.JPG',
-          desc: '抽象画廊'
-        },
-        {
-          id: '0004',
-          url: '/static/images/grandma-daughter.JPG',
-          desc: '翡翠湾'
-        },
-        {
-          id: '0005',
-          url: '/static/images/grandma-daughter.JPG',
-          desc: '渔港'
-        },
-        {
-          id: '0006',
-          url: '/static/images/grandma-daughter.JPG',
-          desc: '风车'
-        },
-        {
-          id: '0007',
-          url: '/static/images/grandma-daughter.JPG',
-          desc: '冲浪'
-        },
-        {
-          id: '0008',
-          url: '/static/images/grandma-daughter.JPG',
-          desc: '大厝'
-        },
-        {
-          id: '0009',
-          url: '/static/images/grandma-daughter.JPG',
-          desc: '草礁'
-        }
-      ]
+      }
     }
   },
   computed: {
     pages () {
       const pages = []
-      this.iconList.forEach((item, index) => {
-        console.log(item.id)
+      this.list.forEach((item, index) => {
         const page = Math.floor(index / 8)
         if (!pages[page]) {
           pages[page] = []
@@ -85,6 +41,9 @@ export default {
         pages[page].push(item)
       })
       return pages
+    },
+    showCategory () {
+      return this.list.length
     }
   }
 }

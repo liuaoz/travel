@@ -24,7 +24,7 @@
       {
         "id": "0001",
         "imgUrl": "/static/images/grandma-daughter.JPG",
-        "desc": "家乡哈哈哈哈哈哈哈"
+        "desc": "名人堂"
       },
       {
         "id": "0002",
@@ -65,6 +65,52 @@
         "id": "0009",
         "imgUrl": "/static/images/grandma-daughter.JPG",
         "desc": "草礁"
+      }
+    ],
+    "recommendList": [
+      {
+        "id": "0001",
+        "imgUrl": "/static/images/mother-daughter.JPG",
+        "title": "大澳湾海景",
+        "desc": "这个地方可以海上游玩"
+      },
+      {
+        "id": "0002",
+        "imgUrl": "/static/images/mother-daughter.JPG",
+        "title": "大澳湾海景",
+        "desc": "这个地方可以海上游玩"
+      },
+      {
+        "id": "0003",
+        "imgUrl": "/static/images/mother-daughter.JPG",
+        "title": "大澳湾海景",
+        "desc": "这个地方可以海上游玩"
+      },
+      {
+        "id": "0004",
+        "imgUrl": "/static/images/mother-daughter.JPG",
+        "title": "大澳湾海景",
+        "desc": "这个地方可以海上游玩"
+      }
+    ],
+    "weekendList": [
+      {
+        "id": "0001",
+        "imgUrl": "/static/images/mother-daughter.JPG",
+        "title": "周末烧烤",
+        "desc": "在周末可以烧烤，优惠力度大大的。"
+      },
+      {
+        "id": "0002",
+        "imgUrl": "/static/images/mother-daughter.JPG",
+        "title": "周末烧烤",
+        "desc": "在周末可以烧烤，优惠力度大大的。"
+      },
+      {
+        "id": "0003",
+        "imgUrl": "/static/images/mother-daughter.JPG",
+        "title": "周末烧烤",
+        "desc": "在周末可以烧烤，优惠力度大大的。"
       }
     ]
   }

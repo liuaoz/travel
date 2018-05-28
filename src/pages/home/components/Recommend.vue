@@ -2,8 +2,8 @@
   <div>
     <div class="title">热门推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of itemList" :key="item.id">
-        <img class="item-img" :src="item.url"/>
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
+        <img class="item-img" :src="item.imgUrl"/>
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
           <p class="item-desc">{{item.desc}}</p>
@@ -17,35 +17,11 @@
 <script>
 export default {
   name: 'HomeRecommend',
+  props: {
+    list: Array
+  },
   data () {
-    return {
-      itemList: [
-        {
-          id: '0001',
-          url: '/static/images/mother-daughter.JPG',
-          title: '大澳湾海景',
-          desc: '这个地方可以海上游玩'
-        },
-        {
-          id: '0002',
-          url: '/static/images/mother-daughter.JPG',
-          title: '大澳湾海景',
-          desc: '这个地方可以海上游玩'
-        },
-        {
-          id: '0003',
-          url: '/static/images/mother-daughter.JPG',
-          title: '大澳湾海景',
-          desc: '这个地方可以海上游玩'
-        },
-        {
-          id: '0004',
-          url: '/static/images/mother-daughter.JPG',
-          title: '大澳湾海景',
-          desc: '这个地方可以海上游玩'
-        }
-      ]
-    }
+    return {}
   }
 }
 </script>

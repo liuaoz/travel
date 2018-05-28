@@ -1,73 +1,39 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="showSwiper">
       <!-- slides -->
-      <swiper-slide v-for="item of swiperList" :key="item.id">
+      <swiper-slide v-for="item of list" :key="item.id">
         <img class="swiper-img" :src="item.imgUrl">
       </swiper-slide>
       <!-- Optional controls -->
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
   </div>
+  <!--  -->
 </template>
 
 <script>
 export default {
   name: 'HomeSwiper',
   props: {
-    swiperList: {
-      type: Array,
-      default () {
-        return [
-          {
-            id: '001',
-            imgUrl: '/static/images/mother-daughter.JPG'
-          },
-          {
-            id: '002',
-            imgUrl: '/static/images/my-parents.JPG'
-          },
-          {
-            id: '003',
-            imgUrl: '/static/images/mother-daughter.JPG'
-          },
-          {
-            id: '004',
-            imgUrl: '/static/images/with-computer.JPG'
-          }
-        ]
-      }
+    list: {
+      type: Array
     }
   },
   data () {
     return {
       swiperOption: {
+        autoplay: true,
         pagination: '.swiper-pagination',
         loop: true,
         spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: {
-          delay: 1000
-        }
-      },
-      swiperList2: [
-        {
-          id: '001',
-          imgUrl: '/static/images/mother-daughter.JPG'
-        },
-        {
-          id: '002',
-          imgUrl: '/static/images/my-parents.JPG'
-        },
-        {
-          id: '003',
-          imgUrl: '/static/images/mother-daughter.JPG'
-        },
-        {
-          id: '004',
-          imgUrl: '/static/images/with-computer.JPG'
-        }
-      ]
+        centeredSlides: true
+      }
+    }
+  },
+  computed: {
+    showSwiper () {
+      return this.list.length
     }
   }
 }

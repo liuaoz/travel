@@ -2,9 +2,9 @@
   <div>
     <div class="title">周末旅游</div>
     <ul>
-      <li class="item border-bottom" v-for="item of itemList" :key="item.id">
+      <li class="item border-bottom" v-for="item of list" :key="item.id">
         <div class="item-img-wrapper">
-          <img class="item-img" :src="item.url"/>
+          <img class="item-img" :src="item.imgUrl"/>
         </div>
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -18,29 +18,11 @@
 <script>
 export default {
   name: 'HomeWeekend',
+  props: {
+    list: Array
+  },
   data () {
-    return {
-      itemList: [
-        {
-          id: '0001',
-          url: '/static/images/mother-daughter.JPG',
-          title: '周末烧烤',
-          desc: '在周末可以烧烤，优惠力度大大的。'
-        },
-        {
-          id: '0002',
-          url: '/static/images/mother-daughter.JPG',
-          title: '周末烧烤',
-          desc: '在周末可以烧烤，优惠力度大大的。'
-        },
-        {
-          id: '0003',
-          url: '/static/images/mother-daughter.JPG',
-          title: '周末烧烤',
-          desc: '在周末可以烧烤，优惠力度大大的。'
-        }
-      ]
-    }
+    return {}
   }
 }
 </script>
@@ -53,7 +35,7 @@ export default {
   .item-img-wrapper
     overflow : hidden
     height : 0
-    padding-bottom : 33.9%
+    padding-bottom : 37.09%
     .item-img
       width : 100%
   .item-info
