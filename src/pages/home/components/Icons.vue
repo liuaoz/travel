@@ -28,7 +28,7 @@ export default {
         {
           id: '0001',
           url: '/static/images/grandma-daughter.JPG',
-          desc: '家乡哈哈哈哈哈哈哈'
+          desc: '名人堂'
         },
         {
           id: '0002',
