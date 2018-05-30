@@ -58,7 +58,7 @@ export default {
   },
   computed: {
     noData () {
-      return this.list.length
+      return !this.list.length
     }
   }
 
