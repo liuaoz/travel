@@ -18,6 +18,7 @@ import HomeRecommend from './components/Recommend'
 import HomeWeekend from './components/Weekend'
 import HomeCategory from './components/Category'
 import axios from 'axios'
+import { mapState } from 'vuex'
 
 // 存在问题，子组件页面创建完成，ajax才请求数据，造成子组件显示问题
 
@@ -33,6 +34,7 @@ export default {
   },
   data () {
     return {
+      lastCity: '',
       swiperList: [],
       categoryList: [],
       recommendList: [],
@@ -42,7 +44,7 @@ export default {
   methods: {
     getHomeInfo () {
       console.info('get home info ...')
-      axios.get('/api/index.json').then(this.getHomeInfoSucc)
+      axios.get('/api/index.json?city=' + this.city).then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
       res = res.data
@@ -56,7 +58,19 @@ export default {
     }
   },
   mounted () {
+    console.log('【home.vue】' + 'mounted')
+    this.lastCity = this.city
     this.getHomeInfo()
+  },
+  computed: {
+    ...mapState(['city'])
+  },
+  activated () {
+    if (this.lastCity !== this.city) {
+      this.lastCity = this.city
+      this.getHomeInfo()
+    }
+    console.log('【home.vue】' + 'activated')
   }
 }
 
