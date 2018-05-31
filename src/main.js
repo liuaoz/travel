@@ -18,6 +18,7 @@ fastClick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
 
 /* 使用vuex实现数据共享 */
+/* 使用localstorage 保存当前城市功能 */
 /* eslint-disable no-new */
 /* 在es6中，键和值一样的情况，可以省略一部分 */
 new Vue({
