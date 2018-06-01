@@ -1,19 +1,40 @@
 <template>
-  <div class="banner">
-    <img class="banner-img" src="/static/images/mother-daughter.JPG">
-    <div class="banner-info">
-      <div class="banner-title">抽象画廊大浪淘沙(AAAAA景区)</div>
-      <div class="banner-number">
-        <span class="iconfont banner-icon">&#xe692;</span>
-        39
+  <div>
+    <div class="banner" @click="handleBannerClick">
+      <img class="banner-img" src="/static/images/mother-daughter.JPG">
+      <div class="banner-info">
+        <div class="banner-title">抽象画廊大浪淘沙(AAAAA景区)</div>
+        <div class="banner-number">
+          <span class="iconfont banner-icon">&#xe692;</span>
+          39
+        </div>
       </div>
     </div>
+    <common-gallary :imgs="imgs" v-show="showGallary" @close="handleGallaryClose"></common-gallary>
   </div>
 </template>
 
 <script>
+import CommonGallary from 'common/gallary/Gallary'
 export default {
-  name: 'DetailBanner'
+  name: 'DetailBanner',
+  components: {
+    CommonGallary
+  },
+  data () {
+    return {
+      showGallary: false,
+      imgs: ['/static/images/mother-daughter.JPG', '/static/images/mother-daughter.JPG']
+    }
+  },
+  methods: {
+    handleBannerClick () {
+      this.showGallary = true
+    },
+    handleGallaryClose () {
+      this.showGallary = false
+    }
+  }
 }
 </script>
 
