@@ -8,7 +8,9 @@
 import DetailBanner from './components/Banner'
 export default {
   name: 'Detail',
-  components: {DetailBanner}
+  components: {
+    DetailBanner
+  }
 }
 </script>
 
