@@ -37,7 +37,7 @@ export default {
   },
   methods: {
     getDetailInfo () {
-      axios.get('/api/detail.json', {
+      axios.get('http://54.199.168.50:80/static/mock/detail.json', {
         params: {
           id: this.$route.params.id
         }

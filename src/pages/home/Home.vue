@@ -44,7 +44,7 @@ export default {
   methods: {
     getHomeInfo () {
       console.info('get home info ...')
-      axios.get('/api/index.json?city=' + this.city).then(this.getHomeInfoSucc)
+      axios.get('http://54.199.168.50:80/static/mock/index.json?city=' + this.city).then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
       res = res.data
